@@ -1,7 +1,7 @@
 export const defaultSEO = {
 	title: "imjustKhznh - Web Developer",
 	description:
-		"Final-year IT student passionate about building modern web applications with exceptional user experiences. Specializing in React, Next.js, Node.js, and full-stack development.",
+		"Building modern web applications with clean code and exceptional user experiences. Full-stack developer specializing in React, Next.js, Node.js, and MongoDB.",
 	siteName: "imjustKhznh - Web Developer",
 	openGraph: {
 		type: "website",
