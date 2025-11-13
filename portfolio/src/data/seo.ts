@@ -1,19 +1,19 @@
 export const defaultSEO = {
-	title: "Your Name - Full Stack Developer Portfolio",
+	title: "Khznh - Web Developer",
 	description:
-		"Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies. Building scalable, user-friendly web applications with clean code and best practices.",
-	siteName: "Your Name Portfolio",
+		"Final-year IT student passionate about building modern web applications with exceptional user experiences. Specializing in React, Next.js, Node.js, and full-stack development.",
+	siteName: "imjustKhznh - Web Developer",
 	openGraph: {
 		type: "website",
 		locale: "en_US",
 		url: "https://my-portfolio-imjustkhznh.vercel.app/",
-		siteName: "Your Name - Developer Portfolio",
+		siteName: "imjustKhznh - Web Developer",
 		images: [
 			{
 				url: "https://my-portfolio-imjustkhznh.vercel.app/api/og",
 				width: 1200,
 				height: 630,
-				alt: "imjustKhznh - Full Stack Developer Portfolio",
+				alt: "imjustKhznh - Web Developer",
 				type: "image/png",
 			},
 		],
