@@ -1,5 +1,5 @@
 export const defaultSEO = {
-	title: "Khznh - Web Developer",
+	title: "imjustKhznh - Web Developer",
 	description:
 		"Final-year IT student passionate about building modern web applications with exceptional user experiences. Specializing in React, Next.js, Node.js, and full-stack development.",
 	siteName: "imjustKhznh - Web Developer",
