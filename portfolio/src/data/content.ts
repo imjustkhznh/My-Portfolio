@@ -39,7 +39,7 @@ export const projects: Project[] = [
     	id: "crud-todo-api",
     	name: "Todo API with Notifications",
     	tagline: "RESTful task API with real-time alerts",
-    	image: "/projects/todo-api.png",
+    	image: "/projects/todo.png",
     	tech: ["Node.js", "Express", "MongoDB", "WebSocket"],
     	metrics: [
         	{ label: "API endpoints", value: "12+" },
