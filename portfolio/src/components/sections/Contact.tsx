@@ -4,7 +4,6 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
 import { social } from "@/data/content";
-import emailjs from '@emailjs/browser';
 import { useState } from "react";
 import { SpinningIcon } from "@/components/SpinningIcon";
 
@@ -29,26 +28,28 @@ export function Contact() {
     try {
       setStatus('idle');
       
-      // Send email using EmailJS
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        {
-          from_name: values.name,
-          from_email: values.email,
-          message: values.message,
-          to_email: 'phamgiakhanhlc@gmail.com', // Email nhận
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-      );
-      
-      setStatus('success');
-      reset();
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => setStatus('idle'), 5000);
+      const formData = new FormData();
+      formData.append('access_key', '99130903-2b07-4d76-9970-84b34bd5df22');
+      formData.append('name', values.name);
+      formData.append('email', values.email);
+      formData.append('message', values.message);
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus('success');
+        reset();
+        setTimeout(() => setStatus('idle'), 5000);
+      } else {
+        setStatus('error');
+      }
     } catch (error) {
-      console.error('EmailJS error:', error);
+      console.error('Form submission error:', error);
       setStatus('error');
     }
   };

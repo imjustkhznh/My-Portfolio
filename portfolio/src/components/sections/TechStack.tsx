@@ -8,7 +8,6 @@ import {
 	SiNextdotjs,
 	SiVuedotjs,
 	SiTypescript,
-	SiTailwindcss,
 	SiNodedotjs,
 	SiExpress,
 	SiPython,
@@ -16,6 +15,7 @@ import {
 	SiGraphql,
 	SiPostgresql,
 	SiMongodb,
+	SiMysql,
 	SiRedis,
 	SiDocker,
 	SiAmazonwebservices,
@@ -24,12 +24,18 @@ import {
 	SiGit,
 	SiPostman,
 	SiFigma,
+	SiHtml5,
+	SiCss3,
 } from 'react-icons/si';
 
 function TechIcon({ name }: { name: string }) {
 	const iconProps = { size: 18, className: "flex-shrink-0" };
 
 	switch (name) {
+		case "HTML":
+			return <SiHtml5 {...iconProps} className="text-[#E34F26]" />;
+		case "CSS":
+			return <SiCss3 {...iconProps} className="text-[#1572B6]" />;
 		case "React":
 			return <SiReact {...iconProps} className="text-[#61DAFB]" />;
 		case "Next.js":
@@ -38,23 +44,18 @@ function TechIcon({ name }: { name: string }) {
 			return <SiVuedotjs {...iconProps} className="text-[#42b883]" />;
 		case "TypeScript":
 			return <SiTypescript {...iconProps} className="text-[#3178C6]" />;
-		case "Tailwind CSS":
-			return <SiTailwindcss {...iconProps} className="text-[#06B6D4]" />;
 		case "Node.js":
 			return <SiNodedotjs {...iconProps} className="text-[#339933]" />;
 		case "Express":
 			return <SiExpress {...iconProps} />;
-		case "Python/Django":
-			return (
-				<div className="flex items-center gap-0.5">
-					<SiPython size={16} className="text-[#3776AB]" />
-					<SiDjango size={16} className="text-[#092E20]" />
-				</div>
-			);
+		case "Python":
+			return <SiPython {...iconProps} className="text-[#3776AB]" />;
 		case "REST/GraphQL":
 			return <SiGraphql {...iconProps} className="text-[#E10098]" />;
 		case "PostgreSQL":
 			return <SiPostgresql {...iconProps} className="text-[#4169E1]" />;
+		case "MySQL":
+			return <SiMysql {...iconProps} className="text-[#4479A1]" />;
 		case "MongoDB":
 			return <SiMongodb {...iconProps} className="text-[#47A248]" />;
 		case "Redis":
@@ -143,11 +144,11 @@ export function TechStack() {
 				<Group title="Database" items={techStacks.databases} icon={<Database size={18} />} />
 			</div>
 
-			{/* 2 dưới - grid 2 cột, offset để lệch sang giữa */}
-			<div className="mt-5 grid gap-5 sm:grid-cols-2 lg:max-w-4xl lg:mx-auto">
-				<Group title="DevOps" items={techStacks.devops} icon={<Code2 size={18} />} />
-				<Group title="Tools" items={techStacks.tools} icon={<Wrench size={18} />} />
-			</div>
+		{/* 2 dưới - grid 2 cột, offset để lệch sang giữa */}
+		<div className="mt-5 grid gap-5 sm:grid-cols-2 lg:max-w-4xl lg:mx-auto">
+			<Group title="Tools" items={techStacks.tools} icon={<Wrench size={18} />} />
+			<Group title="Want to Learn" items={techStacks.devops} icon={<Code2 size={18} />} />
+		</div>
 		</section>
 	);
 }

@@ -10,10 +10,10 @@ export type Project = {
 };
 
 export const techStacks = {
-	frontend: ["React", "Next.js", "Vue", "TypeScript", "Tailwind CSS"],
-	backends: ["Node.js", "Express", "Python/Django", "REST/GraphQL"],
-	databases: ["PostgreSQL", "MongoDB", "Redis"],
-	devops: ["Docker", "AWS/GCP", "CI/CD", "Nginx"],
+	frontend: ["HTML", "CSS", "React", "Next.js", "Vue"],
+	backends: ["Node.js", "Express", "Python"],
+	databases: ["MySQL", "PostgreSQL", "MongoDB"],
+	devops: ["Docker"],
 	tools: ["Git", "Postman", "Figma"],
 };
 
@@ -46,7 +46,6 @@ export const projects: Project[] = [
         	{ label: "Response time", value: "< 100ms" },
     	],
     	links: {
-        	demo: "https://crud-todo-api.onrender.com/", 
         	github: "https://github.com/imjustkhznh/Crud_api/tree/feature/todo-notification",
     	},
     	description:
@@ -101,15 +100,15 @@ export const education = [
 
 export const about = {
 	headline:
-		"I'm a web developer passionate about crafting clean, responsive, and user-focused websites.",
+		"I'm a final-year IT student passionate about crafting clean, responsive, and user-focused websites.",
 	body:
 		"I love transforming ideas into interactive digital experiences that are both functional and visually engaging.\n\nMy approach centers on writing maintainable code, optimizing performance, and designing interfaces that feel intuitive to use.\n\nI'm constantly learning new technologies and refining my workflow to deliver better results with every project.\n\nOutside of coding, I enjoy exploring design trends, optimizing my dev setup, and studying how great products are built from the ground up.",
-	hobbies: ["Web Development", "UI/UX Design", "Open Source"],
+	hobbies: ["Web Development", "UI/UX Design", "Learning New Tech"],
 	availability: "Open to internships and freelance projects",
 };
 
 export const social = {
-	email: "phamgiakhanhlc@gmail.com",
+	email: "khanhshrimp171204@gmail.com",
 	github: "https://github.com/imjustkhznh",
 	linkedin: "https://www.linkedin.com/in/imjustkhznh",
 };

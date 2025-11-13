@@ -1,11 +1,18 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
+import { useTheme } from "next-themes";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { type ISourceOptions, MoveDirection, OutMode } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 
 export function ParticlesBackground() {
   const [ready, setReady] = useState(false);
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -25,7 +32,13 @@ export function ParticlesBackground() {
       },
       particles: {
         color: { value: ["#22d3ee", "#a78bfa", "#f472b6"] },
-        links: { color: "#64748b", distance: 140, enable: true, opacity: 0.2, width: 1 },
+        links: { 
+          color: mounted && resolvedTheme === "light" ? "#cbd5e1" : "#64748b", 
+          distance: 140, 
+          enable: true, 
+          opacity: mounted && resolvedTheme === "light" ? 0.3 : 0.2, 
+          width: 1 
+        },
         collisions: { enable: false },
         move: {
           directions: MoveDirection.none,
@@ -36,13 +49,13 @@ export function ParticlesBackground() {
           straight: false,
         },
         number: { density: { enable: true }, value: 150},
-        opacity: { value: 0.5 },
+        opacity: { value: mounted && resolvedTheme === "light" ? 0.6 : 0.5 },
         shape: { type: "circle" },
         size: { value: { min: 1, max: 3 } },
       },
       detectRetina: true,
     }),
-    []
+    [mounted, resolvedTheme]
   );
 
   if (!ready) return null;

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ParticlesBackground } from "@/components/ParticlesBackground";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 
@@ -30,20 +31,29 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="relative overflow-hidden">
-      <ParticlesBackground />
-      <div className="mx-auto max-w-6xl px-6 pt-24 pb-20 sm:pt-32">
+    <section id="hero" className="relative">
+      <div className="absolute inset-0 overflow-hidden">
+        <ParticlesBackground />
+      </div>
+      <motion.div
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        className="fixed top-6 right-6 z-50"
+      >
+        <ThemeToggle />
+      </motion.div>
+      <div className="relative mx-auto max-w-6xl px-6 pt-24 pb-20 sm:pt-32">
         <div className="flex items-center justify-between">
           <motion.span
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400"
+            className="text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-400"
           >
             <span ref={typedTextRef}></span>
             <span id="typing-cursor" className="animate-pulse">|</span>
           </motion.span>
-          {/* Theme toggle removed per request */}
         </div>
         <div className="mt-10 flex flex-col items-center text-center md:grid md:items-center md:gap-10 md:grid-cols-[1.4fr_.8fr] md:text-left">
           {/* Avatar - Shows first on mobile, second on desktop */}
@@ -84,9 +94,9 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-5 mx-auto md:mx-0 max-w-xl text-lg text-zinc-600 dark:text-zinc-400"
+              className="mt-5 mx-auto md:mx-0 max-w-xl text-lg text-zinc-100 dark:text-zinc-400"
             >
-              A passionate web developer specializing in building scalable and performant web applications.
+              Final-year IT student passionate about building modern web applications with exceptional user experiences.
             </motion.p>
             <motion.div
               initial={{ opacity: 0 }}
@@ -100,7 +110,8 @@ export function Hero() {
               >
                 <Link
                   href="#projects"
-                  className="inline-block rounded-lg bg-zinc-900 px-5 py-3 text-white shadow-sm transition-all hover:bg-zinc-800 hover:shadow-lg dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white dark:hover:shadow-lg dark:hover:shadow-zinc-100/20"
+                  className="inline-flex items-center justify-center rounded-lg bg-zinc-900 text-sm font-medium text-white shadow-sm transition-all hover:bg-zinc-800 hover:shadow-lg dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white dark:hover:shadow-lg dark:hover:shadow-zinc-100/20"
+                  style={{ width: '140.56px', height: '48px' }}
                 >
                   View Projects
                 </Link>
@@ -111,7 +122,8 @@ export function Hero() {
               >
                 <Link
                   href="#contact"
-                  className="inline-block rounded-lg border border-zinc-300 px-5 py-3 text-zinc-800 transition-all hover:bg-zinc-50 hover:shadow-md dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:hover:border-zinc-600"
+                  className="inline-flex items-center justify-center rounded-lg border-2 border-[#939597] text-sm font-medium text-zinc-200 transition-all hover:bg-zinc-800/30 hover:border-zinc-700 hover:shadow-md dark:border-[#939597] dark:text-zinc-200 dark:hover:bg-zinc-800 dark:hover:border-zinc-600"
+                  style={{ width: '140.56px', height: '48px' }}
                 >
                   Contact Me
                 </Link>
