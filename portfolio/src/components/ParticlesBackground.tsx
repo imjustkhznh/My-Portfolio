@@ -35,7 +35,7 @@ export function ParticlesBackground() {
           speed: 0.6,
           straight: false,
         },
-        number: { density: { enable: true }, value: 100},
+        number: { density: { enable: true }, value: 150},
         opacity: { value: 0.5 },
         shape: { type: "circle" },
         size: { value: { min: 1, max: 3 } },

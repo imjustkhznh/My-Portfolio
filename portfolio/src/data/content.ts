@@ -86,25 +86,15 @@ export const projects: Project[] = [
 	},
 ];
 
-export const experience = [
+export const education = [
 	{
-		company: "TechCorp",
-		role: "Senior Full‑Stack Engineer",
-		period: "2023 — Present",
-		achievements: [
-			"Scaled multi-region architecture on AWS (ECS + RDS + CloudFront)",
-			"Reduced P95 latency by 38% via caching, indexing, and profiling",
-			"Led migration to Turborepo + CI workflows (30% faster builds)",
-		],
-	},
-	{
-		company: "StartupX",
-		role: "Full‑Stack Developer",
-		period: "2021 — 2023",
-		achievements: [
-			"Built real-time features using websockets and Redis pub/sub",
-			"Shipped analytics modules with charting and ETL pipelines",
-			"Improved signup conversion by 11% through UX refinements",
+		school: "Vietnam Women's Academy",
+		degree: "Bachelor of Information Technology",
+		period: "2021 — 2025",
+		highlights: [
+			"Final-year student specializing in Web Development",
+			"Relevant coursework: Database Management, Web Programming, Software Engineering",
+			"Built multiple full-stack projects using React, Node.js, and modern frameworks",
 		],
 	},
 ];
@@ -115,7 +105,6 @@ export const about = {
 	body:
 		"I love transforming ideas into interactive digital experiences that are both functional and visually engaging.\n\nMy approach centers on writing maintainable code, optimizing performance, and designing interfaces that feel intuitive to use.\n\nI'm constantly learning new technologies and refining my workflow to deliver better results with every project.\n\nOutside of coding, I enjoy exploring design trends, optimizing my dev setup, and studying how great products are built from the ground up.",
 	hobbies: ["Web Development", "UI/UX Design", "Open Source"],
-	location: "Hanoi, Vietnam",
 	availability: "Open to internships and freelance projects",
 };
 

@@ -9,9 +9,10 @@ export function Projects() {
 	return (
 		<section id="projects" className="mx-auto max-w-6xl px-6 py-16">
 			<motion.h2
-				initial={{ opacity: 0, y: 12 }}
-				whileInView={{ opacity: 1, y: 0 }}
+				initial={{ opacity: 0, y: 12, filter: "blur(4px)" }}
+				whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
 				viewport={{ once: true }}
+				transition={{ duration: 0.5 }}
 				className="mb-8 text-2xl font-bold text-zinc-900 dark:text-zinc-50 flex items-center"
 			>
 				<SpinningIcon />
@@ -19,13 +20,14 @@ export function Projects() {
 			</motion.h2>
 			<div className="grid gap-6 md:grid-cols-2">
 				{projects.map((p, idx) => (
-					<motion.article
-						key={p.id}
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						viewport={{ once: true }}
-						transition={{ duration: 0.5, delay: idx * 0.1 }}
-						className="group overflow-hidden rounded-2xl border border-zinc-200 bg-white/60 shadow-sm transition hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/50"
+				<motion.article
+					key={p.id}
+					initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
+					whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.6, delay: idx * 0.1 }}
+					whileHover={{ y: -8, transition: { duration: 0.3, ease: "easeOut" } }}
+						className="group overflow-hidden rounded-2xl border border-zinc-200 bg-white/60 shadow-sm transition-shadow hover:shadow-xl dark:border-zinc-800 dark:bg-zinc-900/50"
 					>
 						<div className="relative h-56 w-full overflow-hidden">
 							<Image

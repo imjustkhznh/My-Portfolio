@@ -92,12 +92,12 @@ function TechIcon({ name }: { name: string }) {
 }
 
 function Group({ title, items, icon }: { title: string; items: string[]; icon: React.ReactNode }) {
-	return (
-		<motion.div
-			initial={{ opacity: 0, y: 20 }}
-			whileInView={{ opacity: 1, y: 0 }}
-			viewport={{ once: true }}
-			transition={{ duration: 0.5 }}
+		return (
+			<motion.div
+				initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
+				whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+				viewport={{ once: true }}
+				transition={{ duration: 0.6 }}
 			className="rounded-2xl border border-zinc-200 bg-white/50 p-5 shadow-sm backdrop-blur dark:border-zinc-800 dark:bg-zinc-900/40"
 		>
 			<div className="mb-3 flex items-center gap-2 text-zinc-900 dark:text-zinc-100">
@@ -109,9 +109,9 @@ function Group({ title, items, icon }: { title: string; items: string[]; icon: R
 					<span
 						key={item}
 						title={item}
-						className="rounded-md border border-zinc-200 bg-zinc-50 px-3 py-1 text-sm text-zinc-700 transition hover:bg-white dark:border-zinc-800 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 flex items-center gap-2"
+						className="rounded-md border border-zinc-200 bg-zinc-50 px-3 py-1 text-sm text-zinc-700 transition hover:bg-white dark:border-zinc-800 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 flex items-center gap-2 group"
 					>
-						<span className="flex items-center justify-center text-zinc-700 dark:text-zinc-200">
+						<span className="flex items-center justify-center text-zinc-700 dark:text-zinc-200 transition-transform duration-300 group-hover:rotate-12">
 							<TechIcon name={item} />
 						</span>
 						<span className="font-medium">{item}</span>
@@ -126,9 +126,10 @@ export function TechStack() {
 	return (
 		<section id="tech" className="mx-auto max-w-6xl px-6 py-16">
 			<motion.h2
-				initial={{ opacity: 0, y: 12 }}
-				whileInView={{ opacity: 1, y: 0 }}
+				initial={{ opacity: 0, y: 12, filter: "blur(4px)" }}
+				whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
 				viewport={{ once: true }}
+				transition={{ duration: 0.5 }}
 				className="mb-8 text-2xl font-bold text-zinc-900 dark:text-zinc-50 flex items-center"
 			>
 				<SpinningIcon />

@@ -3,8 +3,32 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ParticlesBackground } from "@/components/ParticlesBackground";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 export function Hero() {
+  const typedTextRef = useRef<HTMLSpanElement>(null);
+  
+  useEffect(() => {
+    const fullText = "Web Developer";
+    let currentIndex = 0;
+    
+    const typingInterval = setInterval(() => {
+      if (typedTextRef.current && currentIndex <= fullText.length) {
+        typedTextRef.current.textContent = fullText.slice(0, currentIndex);
+        currentIndex++;
+      } else {
+        clearInterval(typingInterval);
+        // Remove cursor after typing is done
+        setTimeout(() => {
+          const cursor = document.getElementById('typing-cursor');
+          if (cursor) cursor.style.display = 'none';
+        }, 500);
+      }
+    }, 100);
+
+    return () => clearInterval(typingInterval);
+  }, []);
+
   return (
     <section id="hero" className="relative overflow-hidden">
       <ParticlesBackground />
@@ -16,7 +40,8 @@ export function Hero() {
             transition={{ duration: 0.5 }}
             className="text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400"
           >
-            Web Developer
+            <span ref={typedTextRef}></span>
+            <span id="typing-cursor" className="animate-pulse">|</span>
           </motion.span>
           {/* Theme toggle removed per request */}
         </div>
@@ -48,7 +73,10 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl font-bold leading-tight text-zinc-900 dark:text-zinc-50 sm:text-5xl"
+              className="text-4xl font-bold leading-tight sm:text-5xl bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 dark:from-blue-400 dark:via-cyan-400 dark:to-teal-400 bg-clip-text text-transparent animate-gradient"
+              style={{
+                backgroundSize: '200% 200%',
+              }}
            >
               Hi, I'm Khznh! 
             </motion.h1>
@@ -66,18 +94,28 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mt-8 flex flex-wrap gap-3 justify-center md:justify-start"
             >
-              <Link
-                href="#projects"
-                className="rounded-lg bg-zinc-900 px-5 py-3 text-white shadow-sm transition hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white"
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                View Projects
-              </Link>
-              <Link
-                href="#contact"
-                className="rounded-lg border border-zinc-300 px-5 py-3 text-zinc-800 transition hover:bg-zinc-50 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800"
+                <Link
+                  href="#projects"
+                  className="inline-block rounded-lg bg-zinc-900 px-5 py-3 text-white shadow-sm transition-all hover:bg-zinc-800 hover:shadow-lg dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white dark:hover:shadow-lg dark:hover:shadow-zinc-100/20"
+                >
+                  View Projects
+                </Link>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Contact Me
-              </Link>
+                <Link
+                  href="#contact"
+                  className="inline-block rounded-lg border border-zinc-300 px-5 py-3 text-zinc-800 transition-all hover:bg-zinc-50 hover:shadow-md dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:hover:border-zinc-600"
+                >
+                  Contact Me
+                </Link>
+              </motion.div>
             </motion.div>
           </div>
         </div>

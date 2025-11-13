@@ -56,9 +56,10 @@ export function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-6xl px-6 py-16">
       <motion.h2
-        initial={{ opacity: 0, y: 12 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 12, filter: "blur(4px)" }}
+        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
         className="mb-8 text-2xl font-bold text-zinc-900 dark:text-zinc-50 flex items-center"
       >
         <SpinningIcon />
@@ -67,18 +68,18 @@ export function Contact() {
       <div className="grid gap-6 md:grid-cols-2">
         {/* Left Column - Info Box */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
           className="rounded-2xl border border-zinc-200 bg-white/60 p-5 text-zinc-700 dark:border-zinc-800 dark:bg-zinc-900/50 dark:text-zinc-300"
         >
           <h3 className="font-semibold text-zinc-900 dark:text-zinc-100 mb-3">
-            Let's Connect!
+            Get In Touch
           </h3>
           
-          <p className="mb-4">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+          <p className="mb-4 text-sm leading-relaxed">
+            I'm currently available for freelance work and open to discussing exciting opportunities. Whether you have a project in mind or just want to connect, feel free to reach out.
           </p>
 
           <div className="space-y-3">
@@ -96,7 +97,14 @@ export function Contact() {
 
             <div>
               <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-1">
-                Social Links
+                Location
+              </p>
+              <p className="text-sm">Hanoi, Vietnam</p>
+            </div>
+
+            <div>
+              <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-1">
+                Connect
               </p>
               <div className="flex gap-3 text-sm">
                 <a className="underline hover:text-zinc-900 dark:hover:text-zinc-100" href={social.github} target="_blank">
@@ -111,33 +119,19 @@ export function Contact() {
 
             <div>
               <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-1">
-                Location
-              </p>
-              <p className="text-sm">Hanoi, Vietnam</p>
-            </div>
-
-            <div>
-              <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-1">
                 Availability
               </p>
-              <p className="text-sm">Open to full-time, part-time, and freelance opportunities</p>
-            </div>
-
-            <div>
-              <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-1">
-                Response Time
-              </p>
-              <p className="text-sm">Usually within 24 hours</p>
+              <p className="text-sm">Open for freelance projects</p>
             </div>
           </div>
         </motion.div>
 
         {/* Right Column - Contact Form */}
         <motion.form
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           onSubmit={handleSubmit(onSubmit)}
           className="rounded-2xl border border-zinc-200 bg-white/60 p-5 dark:border-zinc-800 dark:bg-zinc-900/50"
         >
