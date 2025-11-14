@@ -11,7 +11,7 @@ export function About() {
 				whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
 				viewport={{ once: true }}
 				transition={{ duration: 0.5 }}
-				className="mb-12 text-2xl font-bold text-zinc-900 dark:text-zinc-50 flex items-center"
+				className="mb-12 text-2xl font-bold text-white flex items-center"
 			>
 				<SpinningIcon />
 				About Me
@@ -24,7 +24,7 @@ export function About() {
 				whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
 				viewport={{ once: true }}
 				transition={{ duration: 0.6 }}
-				className="rounded-2xl border border-zinc-200 bg-white/60 p-5 text-zinc-700 dark:border-zinc-800 dark:bg-zinc-900/50 dark:text-zinc-300 space-y-4"
+				className="rounded-2xl border border-zinc-800 bg-zinc-900/80 p-5 text-zinc-100 space-y-4"
 				>
 					<p className="text-lg leading-relaxed text-zinc-800 dark:text-zinc-300">
 						{about.headline}

@@ -99,7 +99,7 @@ function Group({ title, items, icon }: { title: string; items: string[]; icon: R
 				whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
 				viewport={{ once: true }}
 				transition={{ duration: 0.6 }}
-			className="rounded-2xl border border-zinc-200 bg-white/50 p-5 shadow-sm backdrop-blur dark:border-zinc-800 dark:bg-zinc-900/40"
+			className="rounded-2xl border border-zinc-800 bg-zinc-900/80 p-5 shadow-sm backdrop-blur text-zinc-100"
 		>
 			<div className="mb-3 flex items-center gap-2 text-zinc-900 dark:text-zinc-100">
 				<span className="text-zinc-500">{icon}</span>
@@ -131,7 +131,7 @@ export function TechStack() {
 				whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
 				viewport={{ once: true }}
 				transition={{ duration: 0.5 }}
-				className="mb-8 text-2xl font-bold text-zinc-900 dark:text-zinc-50 flex items-center"
+				className="mb-8 text-2xl font-bold text-white flex items-center"
 			>
 				<SpinningIcon />
 				Tech Stack

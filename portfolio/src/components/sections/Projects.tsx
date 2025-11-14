@@ -13,7 +13,7 @@ export function Projects() {
 				whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
 				viewport={{ once: true }}
 				transition={{ duration: 0.5 }}
-				className="mb-8 text-2xl font-bold text-zinc-900 dark:text-zinc-50 flex items-center"
+				className="mb-8 text-2xl font-bold text-white flex items-center"
 			>
 				<SpinningIcon />
 				Featured Projects
