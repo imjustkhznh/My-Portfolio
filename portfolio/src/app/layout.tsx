@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { useEffect } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
@@ -58,7 +57,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="en" className="dark" suppressHydrationWarning>
+      <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -70,8 +69,3 @@ export default function RootLayout({
     </html>
   );
 }
-    useEffect(() => {
-      if (typeof window !== 'undefined') {
-        document.documentElement.classList.add('dark');
-      }
-    }, []);
