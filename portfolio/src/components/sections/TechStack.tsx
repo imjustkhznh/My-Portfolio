@@ -137,18 +137,20 @@ export function TechStack() {
 				Tech Stack
 			</motion.h2>
 			
-			{/* 3 trên - grid 3 cột */}
-			<div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-				<Group title="Frontend" items={techStacks.frontend} icon={<Layout size={18} />} />
-				<Group title="Backend" items={techStacks.backends} icon={<ServerCog size={18} />} />
-				<Group title="Database" items={techStacks.databases} icon={<Database size={18} />} />
-			</div>
+			<div className="space-y-5">
+				{/* 3 trên - grid 3 cột */}
+				<div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+					<Group title="Frontend" items={techStacks.frontend} icon={<Layout size={18} />} />
+					<Group title="Backend" items={techStacks.backends} icon={<ServerCog size={18} />} />
+					<Group title="Database" items={techStacks.databases} icon={<Database size={18} />} />
+				</div>
 
-		{/* 2 dưới - grid 2 cột, offset để lệch sang giữa */}
-		<div className="mt-5 grid gap-5 sm:grid-cols-2 lg:max-w-4xl lg:mx-auto">
-			<Group title="Tools" items={techStacks.tools} icon={<Wrench size={18} />} />
-			<Group title="Want to Learn" items={techStacks.devops} icon={<Code2 size={18} />} />
-		</div>
+				{/* 2 dưới - grid 2 cột, offset để lệch sang giữa */}
+				<div className="grid gap-5 sm:grid-cols-2 lg:max-w-4xl lg:mx-auto">
+					<Group title="Tools" items={techStacks.tools} icon={<Wrench size={18} />} />
+					<Group title="Want to Learn" items={techStacks.devops} icon={<Code2 size={18} />} />
+				</div>
+			</div>
 		</section>
 	);
 }
