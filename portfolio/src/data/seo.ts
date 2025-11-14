@@ -10,7 +10,7 @@ export const defaultSEO = {
 		siteName: "imjustKhznh - Web Developer",
 		images: [
 			{
-				url: "https://my-portfolio-imjustkhznh.vercel.app/api/og",
+				url: "https://my-portfolio-imjustkhznh.vercel.app/og-image.png",
 				width: 1200,
 				height: 630,
 				alt: "imjustKhznh - Web Developer",
