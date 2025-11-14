@@ -99,20 +99,20 @@ function Group({ title, items, icon }: { title: string; items: string[]; icon: R
 				whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
 				viewport={{ once: true }}
 				transition={{ duration: 0.6 }}
-			className="rounded-2xl border border-zinc-800 bg-zinc-900/80 p-5 shadow-sm backdrop-blur text-zinc-100"
-		>
-			<div className="mb-3 flex items-center gap-2 text-zinc-900 dark:text-zinc-100">
+				className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-5 text-white space-y-6"
+			>
+			<div className="mb-3 flex items-center gap-2">
 				<span className="text-zinc-500">{icon}</span>
-				<h3 className="font-semibold">{title}</h3>
+				<h3 className="font-semibold text-white">{title}</h3>
 			</div>
 			<div className="flex flex-wrap gap-2">
 				{items.map((item) => (
 					<span
 						key={item}
 						title={item}
-						className="rounded-md border border-zinc-200 bg-zinc-50 px-3 py-1 text-sm text-zinc-700 transition hover:bg-white dark:border-zinc-800 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 flex items-center gap-2 group"
+						className="rounded-md border border-zinc-800 bg-zinc-900 px-3 py-1 text-sm text-white transition hover:bg-zinc-800 flex items-center gap-2 group"
 					>
-						<span className="flex items-center justify-center text-zinc-700 dark:text-zinc-200 transition-transform duration-300 group-hover:rotate-12">
+						<span className="flex items-center justify-center rounded-full bg-zinc-800 p-1 text-white transition-transform duration-300 group-hover:rotate-12">
 							<TechIcon name={item} />
 						</span>
 						<span className="font-medium">{item}</span>

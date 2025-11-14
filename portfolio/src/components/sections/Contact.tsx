@@ -73,13 +73,13 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="rounded-2xl border border-zinc-200 bg-white/60 p-5 text-zinc-700 dark:border-zinc-800 dark:bg-zinc-900/50 dark:text-zinc-300"
+          className="rounded-2xl border border-zinc-800 bg-zinc-900/80 p-5 text-white"
         >
-          <h3 className="font-semibold text-zinc-900 dark:text-zinc-100 mb-3">
+          <h3 className="font-semibold text-white mb-3">
             Get In Touch
           </h3>
           
-          <p className="mb-4 text-sm leading-relaxed">
+          <p className="mb-4 text-sm leading-relaxed text-white">
             I'm currently available for freelance work and open to discussing exciting opportunities. Whether you have a project in mind or just want to connect, feel free to reach out.
           </p>
 
@@ -134,14 +134,14 @@ export function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
           onSubmit={handleSubmit(onSubmit)}
-          className="rounded-2xl border border-zinc-200 bg-white/60 p-5 dark:border-zinc-800 dark:bg-zinc-900/50"
+          className="rounded-2xl border border-zinc-800 bg-zinc-900/80 p-5 text-white"
         >
           <div className="grid gap-4">
             <div>
               <label className="mb-1 block text-sm text-zinc-600 dark:text-zinc-400">Name</label>
               <input
                 {...register("name")}
-                className="w-full rounded-md border border-zinc-300 bg-white px-3 py-2 text-zinc-800 outline-none ring-0 transition placeholder:text-zinc-400 focus:border-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+                className="w-full rounded-md border border-zinc-700 bg-zinc-800 px-3 py-2 text-zinc-200 outline-none ring-0 transition placeholder:text-zinc-400 focus:border-zinc-500"
                 placeholder="Your name"
               />
               {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>}
@@ -150,7 +150,7 @@ export function Contact() {
               <label className="mb-1 block text-sm text-zinc-600 dark:text-zinc-400">Email</label>
               <input
                 {...register("email")}
-                className="w-full rounded-md border border-zinc-300 bg-white px-3 py-2 text-zinc-800 outline-none ring-0 transition placeholder:text-zinc-400 focus:border-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+                className="w-full rounded-md border border-zinc-700 bg-zinc-800 px-3 py-2 text-zinc-200 outline-none ring-0 transition placeholder:text-zinc-400 focus:border-zinc-500"
                 placeholder="you@example.com"
               />
               {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>}
@@ -160,7 +160,7 @@ export function Contact() {
               <textarea
                 {...register("message")}
                 rows={5}
-                className="w-full rounded-md border border-zinc-300 bg-white px-3 py-2 text-zinc-800 outline-none ring-0 transition placeholder:text-zinc-400 focus:border-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+                className="w-full rounded-md border border-zinc-700 bg-zinc-800 px-3 py-2 text-zinc-200 outline-none ring-0 transition placeholder:text-zinc-400 focus:border-zinc-500"
                 placeholder="How can I help?"
               />
               {errors.message && (
@@ -170,7 +170,7 @@ export function Contact() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="rounded-lg bg-zinc-900 px-4 py-2 text-sm text-white disabled:opacity-70 dark:bg-zinc-100 dark:text-zinc-900"
+              className="w-full rounded-md bg-white text-zinc-900 px-3 py-2 font-semibold transition hover:bg-zinc-200 disabled:opacity-70"
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>

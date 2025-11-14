@@ -64,7 +64,7 @@ export function Hero() {
             className="mb-8 md:mb-0 md:order-2 md:justify-self-end"
           >
             <div className="group relative h-32 w-32 sm:h-40 sm:w-40 md:h-44 md:w-44 overflow-hidden rounded-2xl bg-gradient-to-br from-cyan-300/30 via-fuchsia-300/30 to-violet-300/30 p-[2px] backdrop-blur flex-shrink-0 mx-auto md:mx-0">
-              <div className="absolute inset-0 -z-10 bg-gradient-to-br from-cyan-500/40 via-fuchsia-500/40 to-violet-500/40 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
+              <div className="absolute inset-0 -z-10 bg-gradient-to-r from-blue-500 via-cyan-400 to-white opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
               <div className="h-full w-full rounded-2xl bg-white/70 p-2 dark:bg-zinc-900/70">
                 <Image
                   src="/avt.jpg"
@@ -83,7 +83,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl font-bold leading-tight sm:text-5xl bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 dark:from-blue-400 dark:via-cyan-400 dark:to-teal-400 bg-clip-text text-transparent animate-gradient"
+              className="text-4xl font-bold leading-tight sm:text-5xl bg-gradient-to-r from-blue-500 via-cyan-400 to-white bg-clip-text text-transparent animate-gradient"
               style={{
                 backgroundSize: '200% 200%',
               }}
@@ -110,7 +110,7 @@ export function Hero() {
               >
                 <Link
                   href="#projects"
-                  className="inline-flex items-center justify-center rounded-lg bg-zinc-900 text-sm font-medium text-white shadow-sm transition-all hover:bg-zinc-800 hover:shadow-lg dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white dark:hover:shadow-lg dark:hover:shadow-zinc-100/20"
+                  className="inline-flex items-center justify-center rounded-lg bg-white text-sm font-medium text-zinc-900 shadow-sm transition-all hover:bg-zinc-200 hover:shadow-lg"
                   style={{ width: '140.56px', height: '48px' }}
                 >
                   View Projects

@@ -27,33 +27,33 @@ export function Projects() {
 					viewport={{ once: true }}
 					transition={{ duration: 0.6, delay: idx * 0.1 }}
 					whileHover={{ y: -8, transition: { duration: 0.3, ease: "easeOut" } }}
-						className="group overflow-hidden rounded-2xl border border-zinc-200 bg-white/60 shadow-sm transition-shadow hover:shadow-xl dark:border-zinc-800 dark:bg-zinc-900/50"
-					>
+					className="group overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 p-5 text-white space-y-6"
+				>
 						<div className="relative h-56 w-full overflow-hidden">
 							<Image
-								src={p.image}
-								alt={p.name}
-								fill
-								className="object-cover transition duration-500 group-hover:scale-[1.03]"
-							/>
+ 								src={p.image}
+ 								alt={p.name}
+ 								fill
+ 								className="object-cover rounded-xl transition duration-500 group-hover:scale-[1.03]"
+ 							/>
 						</div>
-						<div className="p-5">
-							<h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+						<div>
+							<h3 className="text-lg font-semibold text-white">
 								{p.name}
 							</h3>
-							<p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{p.tagline}</p>
+							<p className="mt-1 text-sm text-white">{p.tagline}</p>
 							<div className="mt-3 flex flex-wrap gap-2">
 								{p.tech.map((t) => (
 									<span
 										key={t}
-										className="rounded-md border border-zinc-200 bg-zinc-50 px-2.5 py-1 text-xs text-zinc-700 dark:border-zinc-800 dark:bg-zinc-800 dark:text-zinc-200"
+										className="rounded-md border border-zinc-800 bg-zinc-900 px-2.5 py-1 text-xs text-white"
 									>
 										{t}
 									</span>
 								))}
 							</div>
 							{p.metrics && (
-								<ul className="mt-4 flex flex-wrap gap-4 text-sm text-zinc-700 dark:text-zinc-300">
+ 								<ul className="mt-4 flex flex-wrap gap-4 text-sm text-white">
 									{p.metrics.map((m) => (
 										<li key={m.label} className="flex items-center gap-2">
 											<span className="font-medium">{m.value}</span>
@@ -65,13 +65,13 @@ export function Projects() {
 							)}
 							<div className="mt-5 flex flex-wrap gap-3">
 								{p.links.demo && (
-									<Link
-										className="rounded-lg bg-zinc-900 px-4 py-2 text-sm text-white dark:bg-zinc-100 dark:text-zinc-900"
-										href={p.links.demo}
-										target="_blank"
-									>
-										Live Demo
-									</Link>
+	 								<Link
+	 									className="rounded-lg bg-white text-zinc-900 px-4 py-2 text-sm font-medium shadow-sm transition-all hover:bg-zinc-200 hover:shadow-lg"
+	 									href={p.links.demo}
+	 									target="_blank"
+	 								>
+	 									Live Demo
+	 								</Link>
 								)}
 								{p.links.github && (
 									<Link
