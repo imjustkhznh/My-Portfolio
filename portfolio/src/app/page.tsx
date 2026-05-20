@@ -13,7 +13,7 @@ export default function Home() {
       <Projects />
       <Contact />
       <footer className="mx-auto max-w-6xl px-6 py-10 text-sm text-zinc-500 dark:text-zinc-400">
-        © {new Date().getFullYear()} imjustKhznh. All rights reserved.
+        © {new Date().getFullYear()} Pham Gia Khanh. All rights reserved.
       </footer>
     </main>
   );

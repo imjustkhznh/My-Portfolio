@@ -36,53 +36,23 @@ export const projects: Project[] = [
         	"E-commerce platform for luxury watches built with vanilla HTML/CSS frontend and Node.js backend. Features product catalog, shopping cart, MySQL database, and admin panel for inventory management."
 	},
 	{
-    	id: "crud-todo-api",
-    	name: "Todo API with Notifications",
-    	tagline: "RESTful task API with real-time alerts",
-    	image: "/projects/todo.png",
-    	tech: ["Node.js", "Express", "MongoDB", "WebSocket"],
+    	id: "furniture-da",
+    	name: "Furniture E-Commerce Platform",
+    	tagline: "Full-stack furniture store with admin dashboard",
+    	image: "/projects/furniture.png",
+    	tech: ["Laravel", "PHP", "MySQL", "Docker"],
     	metrics: [
-        	{ label: "API endpoints", value: "12+" },
-        	{ label: "Response time", value: "< 100ms" },
+        	{ label: "Product catalog", value: "500+ items" },
+        	{ label: "Features", value: "15+ pages" },
     	],
     	links: {
-        	github: "https://github.com/imjustkhznh/Crud_api/tree/feature/todo-notification",
+        	demo: "https://furniture-da.onrender.com",
+        	github: "https://github.com/imjustkhznh/Furniture_DA",
     	},
     	description:
-        	"Full CRUD REST API for task management with real-time notification system. Features include user authentication, task prioritization, deadline reminders, and WebSocket-based push notifications for task updates.",
+        	"Full-stack e-commerce platform for furniture sales built with Laravel and PHP. Features comprehensive product catalog, advanced search and filtering, shopping cart system, secure checkout, order management, product comparison, and an admin dashboard for inventory and sales management. Deployed with Docker and optimized for MySQL database.",
 	},
-	{
-    id: "weather-app",
-    name: "Weather Dashboard",
-    tagline: "Real-time weather data with React",
-    image: "/projects/weather.png",
-    tech: ["React", "Vite", "JavaScript", "OpenWeather API"],
-    metrics: [
-        { label: "Forecast days", value: "5-day" },
-        { label: "Update rate", value: "Real-time" },
-    ],
-    links: {
-        github: "https://github.com/imjustkhznh/Weather-app",
-    },
-    description:
-        "React-based weather dashboard built with Vite for fast development. Features include city search, 5-day forecast, hourly predictions, geolocation support, dynamic weather icons, and responsive design with component-driven architecture.",
-},
-	{
-    	id: "python-game",
-    	name: "Python Arcade Game",
-    	tagline: "Interactive game with sound effects",
-    	image: "/projects/game.png",
-    	tech: ["Python", "Pygame"],
-    	metrics: [
-        	{ label: "Sound effects", value: "5+ audio" },
-        	{ label: "Language", value: "Python" },
-    	],
-    	links: {
-        	github: "https://github.com/imjustkhznh/Game",
-    	},
-    	description:
-        	"Interactive arcade-style game built with Python and Pygame. Features include dynamic gameplay, sound effects (gunshot, laser, explosion), background music, and game over system for an engaging player experience."
-	},
+
 ];
 
 export const education = [
@@ -108,7 +78,7 @@ export const about = {
 };
 
 export const social = {
-	email: "khanhshrimp171204@gmail.com",
+	email: "giakhanhpham.dev@gmail.com",
 	github: "https://github.com/imjustkhznh",
 	linkedin: "https://www.linkedin.com/in/imjustkhznh",
 };

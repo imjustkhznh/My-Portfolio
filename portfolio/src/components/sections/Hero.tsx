@@ -67,7 +67,7 @@ export function Hero() {
               <div className="absolute inset-0 -z-10 bg-gradient-to-r from-blue-500 via-cyan-400 to-white opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
               <div className="h-full w-full rounded-2xl bg-white/70 p-2 dark:bg-zinc-900/70">
                 <Image
-                  src="/avt.jpg"
+                  src="/cat.jpg"
                   alt="Avatar"
                   className="h-full w-full rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                   width={160}
