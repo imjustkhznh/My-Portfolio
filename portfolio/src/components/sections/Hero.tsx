@@ -88,7 +88,7 @@ export function Hero() {
                 backgroundSize: '200% 200%',
               }}
            >
-              Hi, I'm Khznh! 
+              Hi, I'm Pham Gia Khanh! 
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
